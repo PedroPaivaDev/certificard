@@ -1,13 +1,39 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
-body {
-  background: linear-gradient(236.85deg, #041832 27.26%, #3468A7 96.03%);
-  font-family: "Roboto", sans-serif;
+/*teste*/
+html, body {
+/*   background: #6f6f6f; */
+  
+/*   background: linear-gradient(315deg, #ffffff, #d7e1ec); */
+  
+  background: linear-gradient(230deg, #051937, #2f365d, #595584, #8776ad, #b898d6);
+  
+/*   background-color: #dedede;
+  opacity: 1;
+  background-image: linear-gradient(#e8e8e8 1.2px, transparent 1.2px), linear-gradient(to right, #e8e8e8 1.2px, #dedede 1.2px);
+  background-size: 24px 24px; */
+  
+/*   background: linear-gradient(236.85deg, #041832 27.26%, #3468A7 96.03%); */
+
+  display: grid;
+  height: 100%;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  /*   font-family: "Roboto", sans-serif; */
+  place-items: center;
+  color: #585858;
 }
 
 .container {
-  background: #ECF4FF;
-  color: #1C1C1C;
+/*   background: #ECF4FF; */
+  
+  background-color: #dedede;
+  opacity: 1;
+  background-image: linear-gradient(#e8e8e8 1.2px, transparent 1.2px), linear-gradient(to right, #e8e8e8 1.2px, #dedede 1.2px);
+  background-size: 24px 24px;
+/*   min-width: 265px;
+  min-heigth: 605px; */
   margin: 64px;
   border-radius: 20px;
   box-shadow: 6px 6px 6px #0E1D2F;
@@ -21,28 +47,37 @@ body {
 
 .perfil {
   display: flex;
-  
 }
   
 .perfil-foto {
-  border-radius: 460px;
+  border-radius: 500px;
   max-height: 160px;
   box-shadow: 8px 4px 4px rgba(0, 0, 0, 0.25);
+  object-fit: contain;
+  max-width: 100%;
+  margin: 0px
 }
 
 .titulo {
   margin-left: 16px;
+  text-align: justify;
 }
 
 /* para estilizar apenas o h1, que é filho da div com class "titulo" */
 .titulo h1 {
   font-weight: 700;
   font-size: 36px;
+  text-align: left;
 }
 
 .titulo h3 {
   font-weight: 400;
   font-size: 24px;
+  text-align: left;
+}
+
+.tema {
+  margin-bottom: -50px;
 }
 
 .tema button {
@@ -50,22 +85,31 @@ body {
   font-weight: 400;
   font-size: 24px;
   line-height: 28px;
-  color: #0E1D2F;
   box-sizing: border-box;
-  background: #ECF4FF;
-  border: 2px solid #0E1D2F;
+  box-shadow: 2px 2px 4px rgba(16, 16, 16, 0.42);
+  background: #c7c7c7;
+  border: 2px solid #585858;
   border-radius: 100px;
-  padding: 8px 16px
+  padding: 8px 16px;
+  color: #585858;
+}
+
+.portfolio {
+  margin-top: 64px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
+  color: 585858;
 }
 
 .projetos {
   display: flex;
   flex-direction: column;
-  background: linear-gradient(230.65deg, #499CFE 27.49%, #9CC8FC 83.19%);
+  background: #b6b2ae;
   box-shadow: 2px 2px 4px rgba(16, 16, 16, 0.42);
   border-radius: 20px;
   align-items: left;
-  padding: 32px;
+  padding: 20px;
 }
 
 .projetosTitulo {
@@ -79,13 +123,13 @@ body {
   line-height: 48px;
   font-weight: 400;
   font-size: 24px;
-  margin-bottom: 40px;
-  margin-left: 40px;
-  margin-right: 40px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .projetoLink:hover {
-  background: white;
+  background: #dedede;
   border-radius: 10px;
   margin: 10px;
   padding: 5px;
@@ -94,25 +138,167 @@ body {
 
 .projetos a {
   text-decoration: none;
-  color: #1C1C1C;
+  color: #585858;
+}
+
+.conquistas {
+  display: block;
+/*   grid-template-columns: 1fr 1fr; */
+  flex-direction: column;
+  background: #b6b2ae;
+  box-shadow: 2px 2px 4px rgba(16, 16, 16, 0.42);
+  border-radius: 20px;
+  place-items: center;
+  padding: 32px;
+  gap: 10px;
+}
+
+img {
+  object-fit: contain;
+  max-width: 90px;
+  margin: 10px
 }
 
 .dark {
-  background: linear-gradient(236.85deg, #375B86 27.26%, #6B87A9 96.03%);
+  background: #333439;
+  
+/*   background: linear-gradient(230deg, rgba(5,43,88,1) 5%, rgba(165,68,196,1)99%, rgba(155,210,221,1) 99%); */
+  
+/*   background: linear-gradient(236.85deg, #375B86 27.26%, #6B87A9 96.03%); */
 }
 
 .dark .container {
-  background: #333439;
+  background: #47484c;
   box-shadow: 6px 6px 6px #0E1D2F;
   border-radius: 20px;
-  color: #F7F7F7;
+  color: #dedede;
 }
 
 .dark .projetos {
-  color: #1C1C1C;
+  color: #dedede;
+  background: #333439;
+}
+
+.dark .projetos a {
+  color: #dedede;
+}
+
+.dark .conquistas {
+  color: #dedede;
+  background: #333439;
 }
 
 .dark .tem button {
   background: #1C1C1C;
   border: 2px solid #F7F7F7;
+}
+
+/* CÓDIGOS DOS POTÕES DAS REDES \/ *//* CÓDIGOS DOS POTÕES DAS REDES \/ */
+/* CÓDIGOS DOS POTÕES DAS REDES \/ *//* CÓDIGOS DOS POTÕES DAS REDES \/ */
+
+.rodape {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: auto 20px;
+  margin-top: 50px;
+}
+
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+  margin-bottom: -10px;
+  padding-bottom: -10px;
+}
+
+.wrapper .icon {
+  position: relative;
+  background: #c7c7c7;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 2px 2px 4px rgba(16, 16, 16, 0.42);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .codepen:hover,
+.wrapper .codepen:hover .tooltip,
+.wrapper .codepen:hover .tooltip::before {
+  background: #424549;
+  color: #ffffff;
+}
+
+.wrapper .linkedin:hover,
+.wrapper .linkedin:hover .tooltip,
+.wrapper .linkedin:hover .tooltip::before {
+  background: #0e76a8;
+  color: #ffffff;
+}
+
+.wrapper .discord:hover,
+.wrapper .discord:hover .tooltip,
+.wrapper .discord:hover .tooltip::before {
+  background: #7289da;
+  color: #ffffff;
+}
+
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+  background: #333333;
+  color: #ffffff;
+}
+
+.wrapper .alura:hover,
+.wrapper .alura:hover .tooltip,
+.wrapper .alura:hover .tooltip::before {
+  background: #0d4d9c;
+  color: #ffffff;
 }
