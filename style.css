@@ -68,26 +68,37 @@ html, body {
   font-weight: 700;
   font-size: 36px;
   text-align: left;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .titulo h3 {
   font-weight: 400;
   font-size: 24px;
   text-align: left;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.titulo p {
+  font-size: 18px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .tema {
+  margin-top: 20px;
   margin-bottom: -50px;
 }
 
 .tema button {
   align-self: flex-end;
   font-weight: 400;
-  font-size: 24px;
-  line-height: 28px;
+  font-size: 20px;
+  line-height: 20px;
   box-sizing: border-box;
   box-shadow: 2px 2px 4px rgba(16, 16, 16, 0.42);
-  background: #c7c7c7;
+  background: #b6b2ae;
   border: 2px solid #585858;
   border-radius: 100px;
   padding: 8px 16px;
@@ -95,11 +106,13 @@ html, body {
 }
 
 .portfolio {
-  margin-top: 64px;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
+  margin-top: 65px;
+  display: flex;
+/*   display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column: minmax(1000px, 2000px); */
   gap: 16px;
-  color: 585858;
+  color: #585858;
 }
 
 .projetos {
@@ -109,11 +122,15 @@ html, body {
   box-shadow: 2px 2px 4px rgba(16, 16, 16, 0.42);
   border-radius: 20px;
   align-items: left;
-  padding: 20px;
+  padding: 40px;
+  min-width: 1100px;
+  flex-basis: 100%;
 }
 
 .projetosTitulo {
-  margin-left: -20px;
+  margin-left: -30px;
+  margin-top: 0px;
+  margin-bottom: 10px;
   font-weight: 700;
   font-size: 36px;
 }
@@ -123,9 +140,7 @@ html, body {
   line-height: 48px;
   font-weight: 400;
   font-size: 24px;
-  margin-bottom: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin: 5px;
 }
 
 .projetoLink:hover {
@@ -148,15 +163,23 @@ html, body {
   background: #b6b2ae;
   box-shadow: 2px 2px 4px rgba(16, 16, 16, 0.42);
   border-radius: 20px;
-  place-items: center;
-  padding: 32px;
+  text-align: center;
+  padding: 20px;
   gap: 10px;
+  max-width: 100px;
+}
+
+.conquistas p {
+  text-align: center;
+  font-weight: 700;
+  font-size: 36px;
+  padding-top: 0px;
 }
 
 img {
   object-fit: contain;
-  max-width: 90px;
-  margin: 10px
+  max-width: 60px;
+  margin: 10px;
 }
 
 .dark {
@@ -188,6 +211,10 @@ img {
   background: #333439;
 }
 
+.dark .conquistas img {
+  filter: invert(1);
+}
+
 .dark .tem button {
   background: #1C1C1C;
   border: 2px solid #F7F7F7;
@@ -208,13 +235,13 @@ img {
 .wrapper {
   display: inline-flex;
   list-style: none;
-  margin-bottom: -10px;
-  padding-bottom: -10px;
+  margin-top: -10px;
+  margin-bottom: -40px;
 }
 
 .wrapper .icon {
   position: relative;
-  background: #c7c7c7;
+  background: #b6b2ae;
   border-radius: 50%;
   padding: 15px;
   margin: 10px;
