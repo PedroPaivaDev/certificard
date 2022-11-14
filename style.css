@@ -2,12 +2,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 /*teste*/
-html, body {
+body {
 /*   background: #6f6f6f; */
   
 /*   background: linear-gradient(315deg, #ffffff, #d7e1ec); */
   
-  background: linear-gradient(230deg, #051937, #2f365d, #595584, #8776ad, #b898d6);
+  background: rgb(91,87,159);
+  background: linear-gradient(90deg, rgba(91,87,159,1) 11%, rgba(49,18,83,1) 55%, rgba(22,2,78,1) 95%);
   
 /*   background-color: #dedede;
   opacity: 1;
@@ -30,7 +31,7 @@ html, body {
   
   background-color: #dedede;
   opacity: 1;
-  background-image: linear-gradient(#e8e8e8 1.2px, transparent 1.2px), linear-gradient(to right, #e8e8e8 1.2px, #dedede 1.2px);
+  background: linear-gradient(#e8e8e8 1.2px, transparent 1.2px), linear-gradient(to right, #e8e8e8 1.2px, #dedede 1.2px);
   background-size: 24px 24px;
 /*   min-width: 265px;
   min-heigth: 605px; */
@@ -123,7 +124,7 @@ html, body {
   border-radius: 20px;
   align-items: left;
   padding: 40px;
-  min-width: 1100px;
+  min-width: 1005px;
   flex-basis: 100%;
 }
 
@@ -232,6 +233,7 @@ img {
   margin-top: 50px;
 }
 
+/* só para deixar os ícones alinhados */
 .wrapper {
   display: inline-flex;
   list-style: none;
@@ -239,6 +241,7 @@ img {
   margin-bottom: -40px;
 }
 
+/* deu uma forma circular para o ancor, usou a tríade para alinhar no centro e inseriu transição, para o hoover ativar a animação */
 .wrapper .icon {
   position: relative;
   background: #b6b2ae;
@@ -257,6 +260,7 @@ img {
   transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
+/* fez uma forma retangular para o span, deixou com opacidade 0 e inseriu a mesma função de transição */
 .wrapper .tooltip {
   position: absolute;
   top: 0;
@@ -271,6 +275,7 @@ img {
   transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
+/* inseriu um content vazio antes do span, mas deu uma forma quadrada pra ele e girou ela em 45°, deixando só a pontinha (trinagulo) pra baixo. Colocou a mesma transição esperando o hoover para animar ela */
 .wrapper .tooltip::before {
   position: absolute;
   content: "";
@@ -283,6 +288,8 @@ img {
   transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
+/* agora o trem começa a ficar interessante: */
+/* quando eu dou o hover no ícone, o span sobe 45px e fica visível. Lembrando que o span está com aquela função de transição */
 .wrapper .icon:hover .tooltip {
   top: -45px;
   opacity: 1;
@@ -290,11 +297,13 @@ img {
   pointer-events: auto;
 }
 
+/* não é necessário essa estilização do span, pq a classe tooltip dele já está sendo estilizada, mas eu deixei... quando eu dou o hoover no ícone, o span fica com uma sombra. Só isso mesmo. */
 .wrapper .icon:hover span,
 .wrapper .icon:hover .tooltip {
   text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
 }
 
+/* esse eu achei foda! quando eu dou hoover no ícone (que também possui a classe codepen, então eu estou dando hoover no codepen), o ícone, o span e o quadradinho (pontinha abaixo do span) ficam com background cinza e fonte branca. O mesmo acontece com os outros.*/
 .wrapper .codepen:hover,
 .wrapper .codepen:hover .tooltip,
 .wrapper .codepen:hover .tooltip::before {
